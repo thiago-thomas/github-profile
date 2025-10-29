@@ -1,0 +1,13 @@
+:root {
+  --gray-dark: #97A3B6;
+  --gray-light: #CDD5E0;
+  --black-default: #000;
+  --black-2: #20293A;
+  --black-3: #364153;
+  --black-4: #111729;
+  --blue-dark: #1D1B48;
+}
+
+body {
+  margin: 0;
+}

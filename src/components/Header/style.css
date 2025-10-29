@@ -1,0 +1,36 @@
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-color: var(--black-default);
+  padding: 24px 16px 0 16px;
+
+  background-image: url('../resources/hero-image-github-profile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  height: 150px;
+}
+
+.app-header__search {
+  background-color: var(--black-2);
+  border-radius: 8px;
+  border: none;
+  padding: 16px;
+  padding-left: 40px;
+  color: white;
+  position: relative;
+  display: block;
+
+  width: 100%;
+  max-width: 600px;
+
+  background-image: url('../resources/Search.svg');
+  background-repeat: no-repeat;
+  background-position: left 8px center;
+}
+
+.app-header__search::placeholder {
+  color: var(--gray-dark);
+}
