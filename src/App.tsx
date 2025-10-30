@@ -5,7 +5,10 @@ function App() {
   return (
     <>
       <Header />
-      <h1>Github-profile</h1>
+      <div className='main-content'>
+        <h1>GitHub</h1>
+        <p>How people build software.</p>
+      </div>
     </>
   )
 }
