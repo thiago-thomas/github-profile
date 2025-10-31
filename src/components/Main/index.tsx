@@ -1,4 +1,5 @@
 import { InfoPill } from '../InfoPill';
+import { Repository } from '../Repository';
 import './style.css'
 
 interface MainProps {
@@ -17,6 +18,9 @@ export function Main({titlePage, subTitlePage}: MainProps) {
       </div>
       <h1 className='title-page'>{titlePage}</h1>
       <p className='subtitle-page'>{subTitlePage}</p>
+      <div className="repository-container">
+        <Repository />
+      </div>
     </main>
   )
 }
