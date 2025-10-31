@@ -1,0 +1,4 @@
+.infopill {
+  background-color: var(--black-4);
+  display: flex;
+}

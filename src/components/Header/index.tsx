@@ -1,6 +1,6 @@
 import "./style.css";
 
-export default function Header() {
+export function Header() {
   return (
     <header className="app-header">
       <input

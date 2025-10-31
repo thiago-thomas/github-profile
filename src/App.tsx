@@ -1,13 +1,17 @@
-import './App.css'
-import Header from './components/Header'
+import "./App.css";
+import { Header } from "./components/Header";
+import { Main } from "./components/Main";
 
 function App() {
   return (
     <>
       <Header />
-      <h1>Github-profile</h1>
+      <Main
+        titlePage="Github"
+        subTitlePage="How people build software"
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
