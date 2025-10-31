@@ -1,4 +1,16 @@
 .infopill {
   background-color: var(--black-4);
-  display: flex;
+  display: inline-block;
+  padding: 8px 0;
+  border-radius: 12px;
+}
+
+.infopill__keyInfo,
+.infopill__valueInfo {
+  display: inline-block;
+  padding: 8px 20px;
+}
+
+.infopill__keyInfo {
+  border-right: 1px solid var(--gray-dark);
 }
