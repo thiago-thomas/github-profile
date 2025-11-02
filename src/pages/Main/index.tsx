@@ -1,5 +1,5 @@
-import { InfoPill } from "../InfoPill";
-import { Repository } from "../Repository";
+import { InfoPill } from "../../components/InfoPill";
+import { Repository } from "../../components/Repository";
 import "./style.css";
 
 interface MainProps {
