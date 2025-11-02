@@ -10,10 +10,10 @@ interface RepositoryProps {
   repoLicense: string,
   repoForks: number,
   repoStars: number,
-  //TODO: repoUpdated
+  repoUpdateInfo: string,
 }
 
-export function Repository({repoTitle, repoDescription,repoForks,repoLicense,repoStars}: RepositoryProps) {
+export function Repository({repoTitle, repoDescription,repoForks,repoLicense,repoStars,repoUpdateInfo}: RepositoryProps) {
   return (
     <div className="repository">
       <h2 className="repository__title">{repoTitle}</h2>
@@ -33,7 +33,7 @@ export function Repository({repoTitle, repoDescription,repoForks,repoLicense,rep
           <img src={Star} alt="Star icon" className="repository__details--icon" />
           <span className="repository__details--text">{repoStars}</span>
         </div>
-        <span className="repository__details--updateInfo">updated 1 days ago</span>
+        <span className="repository__details--updateInfo">{repoUpdateInfo}</span>
       </div>
     </div>
   );

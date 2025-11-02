@@ -6,10 +6,7 @@ function App() {
   return (
     <>
       <Header />
-      <Main
-        titlePage="Github"
-        subTitlePage="How people build software"
-      />
+      <Main githubUser="github" />
     </>
   );
 }
