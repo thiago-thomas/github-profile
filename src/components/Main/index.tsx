@@ -20,6 +20,9 @@ export function Main({titlePage, subTitlePage}: MainProps) {
       <p className='subtitle-page'>{subTitlePage}</p>
       <div className="repository-container">
         <Repository />
+        <Repository />
+        <Repository />
+        <Repository />
       </div>
     </main>
   )

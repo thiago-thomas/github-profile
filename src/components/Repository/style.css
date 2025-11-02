@@ -8,7 +8,7 @@
 h2.repository__title,
 p.repository__description,
 span.repository__details--text{
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 p.repository__description,
@@ -47,7 +47,7 @@ p.repository__description {
 }
 
 .repository__details--updateInfo {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 
