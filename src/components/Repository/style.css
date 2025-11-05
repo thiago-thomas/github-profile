@@ -3,6 +3,12 @@
   background: linear-gradient(90deg, rgba(17, 23, 41, 1) 0%, rgba(29, 27, 72, 1) 100%);
   padding: 24px;
   border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 16px;
+  min-height: max-content;
 }
 
 h2.repository__title,
@@ -20,7 +26,6 @@ span.repository__details--updateInfo {
 h2.repository__title,
 p.repository__description {
   margin: 0;
-  margin-bottom: 16px;
 }
 
 .repository__details,

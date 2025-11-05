@@ -1,5 +1,7 @@
 main {
   padding: 24px;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 .profile-img {
@@ -36,7 +38,10 @@ p.subtitle-page {
 
 .repository-container {
   display: flex;
-  flex-flow: row wrap;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 32px;
+ 
+  & > div {
+    flex: 1 424px;
+  }
 }
