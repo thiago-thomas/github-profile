@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { fetchGithubUser } from "../../services/api";
 import "./style.css";
 
@@ -8,8 +8,9 @@ type GithubUser = {
   avatar_url: string;
 }
 
+type HeaderProps = React.Dispatch<React.SetStateAction<string>>
 
-export function Header({setGithubUsername}: any) {
+export function Header({setGithubUsername}: {setGithubUsername: HeaderProps}) {
   const [user, setUser] = useState<GithubUser | null>(null);
 
   let searchTimeout: number;
@@ -17,24 +18,24 @@ export function Header({setGithubUsername}: any) {
   function findUser(event: React.FormEvent<HTMLInputElement>) {
     const username = event.currentTarget.value;
     
+    // Clear the previous timeout
+    clearTimeout(searchTimeout);
+    
     if (!username) {
       setUser(null);
       return;
     }
-
-    // Clear the previous timeout
-    clearTimeout(searchTimeout);
 
     // Set a new timeout
     searchTimeout = setTimeout(async () => {
       try {
         const userData = await fetchGithubUser(username);
         setUser(userData);
-      } catch (error) {
-        console.error("Error fetching user:", error);
+      } catch (err) {
+        console.error(err)
         setUser(null);
       }
-    }, 2000); // Search after 500ms of no typing
+    }, 1500); // Search after 500ms of no typing
   }
 
   function setGHUser() {

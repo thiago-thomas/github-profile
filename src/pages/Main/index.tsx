@@ -5,6 +5,7 @@ import "./style.css";
 import { fetchGithubReposByUser, fetchGithubUser } from "../../services/api";
 
 type GithubProfile = {
+  login: string;
   name: string;
   bio: string;
   followers: number;
@@ -57,7 +58,7 @@ export function Main({githubUser}: MainProps) {
         <InfoPill keyInfo="Following" valueInfo={githubProfile?.following?.toString()!} />
         <InfoPill keyInfo="Location" valueInfo={githubProfile?.location!} />
       </div>
-      <h1 className="title-page">{githubProfile?.name}</h1>
+      <h1 className="title-page">{githubProfile?.name || githubProfile?.login}</h1>
       <p className="subtitle-page">{githubProfile?.bio}</p>
       <div className="repository-container">
         {
