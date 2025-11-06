@@ -1,4 +1,4 @@
-const API_URL = "https://api.github.com";
+const API_URL = 'https://api.github.com';
 
 export async function fetchGithubReposByUser(user: string, per_page: number = 4): Promise<any> {
   try {

@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { InfoPill } from "../../components/InfoPill";
-import { Repository } from "../../components/Repository";
-import "./style.css";
-import { fetchGithubReposByUser, fetchGithubUser } from "../../services/api";
+import { useEffect, useState } from 'react';
+import { InfoPill } from '../../components/InfoPill';
+import { Repository } from '../../components/Repository';
+import './style.css';
+import { fetchGithubReposByUser, fetchGithubUser } from '../../services/api';
 
 type GithubProfile = {
   login: string;
@@ -70,32 +70,22 @@ export function Main({ githubUser }: MainProps) {
         className="profile-img"
       />
       <div className="infopill-container">
-        <InfoPill
-          keyInfo="Followers"
-          valueInfo={githubProfile?.followers?.toString()!}
-        />
-        <InfoPill
-          keyInfo="Following"
-          valueInfo={githubProfile?.following?.toString()!}
-        />
+        <InfoPill keyInfo="Followers" valueInfo={githubProfile?.followers?.toString()!} />
+        <InfoPill keyInfo="Following" valueInfo={githubProfile?.following?.toString()!} />
         <InfoPill keyInfo="Location" valueInfo={githubProfile?.location!} />
       </div>
-      <h1 className="title-page">
-        {githubProfile?.name || githubProfile?.login}
-      </h1>
+      <h1 className="title-page">{githubProfile?.name || githubProfile?.login}</h1>
       <p className="subtitle-page">{githubProfile?.bio}</p>
       <div className="repository-container">
         {githubRepos.map((repo) => (
           <Repository
             key={repo.name}
             repoTitle={repo.name}
-            repoDescription={repo.description || "No description"}
-            repoLicense={repo.license ? repo.license.name : "No license"}
+            repoDescription={repo.description || 'No description'}
+            repoLicense={repo.license ? repo.license.name : 'No license'}
             repoForks={repo.forks_count}
             repoStars={repo.stargazers_count}
-            repoUpdateInfo={`updated at ${new Date(
-              repo.updated_at
-            ).toLocaleDateString()}`}
+            repoUpdateInfo={`updated at ${new Date(repo.updated_at).toLocaleDateString()}`}
           />
         ))}
       </div>

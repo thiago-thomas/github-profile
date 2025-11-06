@@ -1,25 +1,30 @@
-import './style.css'
+import './style.css';
 
-import Chield from '../../../resources/Chield_alt.svg'
-import Nesting from '../../../resources/Nesting.svg'
-import Star from '../../../resources/Star.svg'
+import Chield from '../../../resources/Chield_alt.svg';
+import Nesting from '../../../resources/Nesting.svg';
+import Star from '../../../resources/Star.svg';
 
 interface RepositoryProps {
-  repoTitle: string,
-  repoDescription: string,
-  repoLicense: string,
-  repoForks: number,
-  repoStars: number,
-  repoUpdateInfo: string,
+  repoTitle: string;
+  repoDescription: string;
+  repoLicense: string;
+  repoForks: number;
+  repoStars: number;
+  repoUpdateInfo: string;
 }
 
-export function Repository({repoTitle, repoDescription,repoForks,repoLicense,repoStars,repoUpdateInfo}: RepositoryProps) {
+export function Repository({
+  repoTitle,
+  repoDescription,
+  repoForks,
+  repoLicense,
+  repoStars,
+  repoUpdateInfo,
+}: RepositoryProps) {
   return (
     <div className="repository">
       <h2 className="repository__title">{repoTitle}</h2>
-      <p className="repository__description">
-        {repoDescription}
-      </p>
+      <p className="repository__description">{repoDescription}</p>
       <div className="repository__details">
         <div className="repository__details__tags">
           <img src={Chield} alt="Chield icon" className="repository__details--icon" />
