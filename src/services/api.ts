@@ -1,7 +1,6 @@
-const API_URL = "https://api.github.com";
-const per_page = 4;
+const API_URL = 'https://api.github.com';
 
-export async function fetchGithubReposByUser(user: string): Promise<any> {
+export async function fetchGithubReposByUser(user: string, per_page: number = 4): Promise<any> {
   try {
     const url = `${API_URL}/users/${user}/repos?sort=updated&direction=desc&per_page=${per_page}`;
     const response = await fetch(url);

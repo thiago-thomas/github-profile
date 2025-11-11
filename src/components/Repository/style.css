@@ -13,7 +13,7 @@
 
 h2.repository__title,
 p.repository__description,
-span.repository__details--text{
+span.repository__details--text {
   font-size: 1rem;
 }
 
@@ -36,6 +36,7 @@ p.repository__description {
 
 .repository__details {
   gap: 16px;
+  flex-flow: row wrap;
 }
 
 .repository__details__tags {
@@ -54,6 +55,3 @@ p.repository__description {
 .repository__details--updateInfo {
   font-size: 0.75rem;
 }
-
-
-

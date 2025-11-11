@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --gray-dark: #97A3B6;
-  --gray-light: #CDD5E0;
+  --gray-dark: #97a3b6;
+  --gray-light: #cdd5e0;
   --white: white;
   --black: black;
-  --black-2: #20293A;
+  --black-2: #20293a;
   --black-3: #364153;
   --black-4: #111729;
-  --blue-dark: #1D1B48;
+  --blue-dark: #1d1b48;
 }
 
 html {
@@ -16,11 +16,23 @@ html {
 }
 
 body {
-  font-family: 'Be Vietnam Pro', sans-serif;
-  
-  margin: 0;
-
   background-color: var(--black-2);
   color: white;
   height: 100%;
+
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+input {
+  font-family: 'Be Vietnam Pro', sans-serif;
 }

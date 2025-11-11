@@ -40,8 +40,22 @@ p.subtitle-page {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
- 
+  margin-bottom: 32px;
+
   & > div {
     flex: 1 424px;
+  }
+}
+
+.view-repositories-container {
+  display: flex;
+  justify-content: center;
+
+  & > button {
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
   }
 }
