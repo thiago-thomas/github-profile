@@ -1,8 +1,8 @@
 import './style.css'
 
-import Chield from '../../../resources/Chield_alt.svg'
-import Nesting from '../../../resources/Nesting.svg'
-import Star from '../../../resources/Star.svg'
+import Chield from '../../assets/Chield_alt.svg'
+import Nesting from '../../assets/Nesting.svg'
+import Star from '../../assets/Star.svg'
 
 interface RepositoryProps {
   repoTitle: string,
