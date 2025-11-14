@@ -72,7 +72,7 @@ export function Main({ githubUser }: MainProps) {
       <div className="infopill-container">
         <InfoPill keyInfo="Followers" valueInfo={githubProfile?.followers?.toString()!} />
         <InfoPill keyInfo="Following" valueInfo={githubProfile?.following?.toString()!} />
-        <InfoPill keyInfo="Location" valueInfo={githubProfile?.location!} />
+        <InfoPill keyInfo="Location" valueInfo={githubProfile?.location || '-'} />
       </div>
       <h1 className="title-page">{githubProfile?.name || githubProfile?.login}</h1>
       <p className="subtitle-page">{githubProfile?.bio}</p>
