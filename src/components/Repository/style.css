@@ -1,7 +1,9 @@
 .repository {
   background: var(--black-4);
   background: linear-gradient(90deg, rgba(17, 23, 41, 1) 0%, rgba(29, 27, 72, 1) 100%);
+  background-clip: padding-box;
   padding: 24px;
+  border: 2px solid transparent;
   border-radius: 16px;
 
   display: flex;
@@ -9,6 +11,14 @@
   justify-content: space-around;
   gap: 16px;
   min-height: max-content;
+
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.repository:hover {
+  border-color: var(--white);
+  filter: brightness(150%);
 }
 
 h2.repository__title,

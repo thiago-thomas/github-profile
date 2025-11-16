@@ -15,6 +15,7 @@ type GithubProfile = {
 };
 
 type GithubRepo = {
+  html_url: string;
   name: string;
   description: string;
   license: {
@@ -80,6 +81,7 @@ export function Main({ githubUser }: MainProps) {
         {githubRepos.map((repo) => (
           <Repository
             key={repo.name}
+            repoLink={repo.html_url}
             repoTitle={repo.name}
             repoDescription={repo.description || 'No description'}
             repoLicense={repo.license ? repo.license.name : 'No license'}

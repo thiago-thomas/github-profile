@@ -5,6 +5,7 @@ import Nesting from '../../../resources/Nesting.svg';
 import Star from '../../../resources/Star.svg';
 
 interface RepositoryProps {
+  repoLink: string;
   repoTitle: string;
   repoDescription: string;
   repoLicense: string;
@@ -14,6 +15,7 @@ interface RepositoryProps {
 }
 
 export function Repository({
+  repoLink,
   repoTitle,
   repoDescription,
   repoForks,
@@ -21,8 +23,13 @@ export function Repository({
   repoStars,
   repoUpdateInfo,
 }: RepositoryProps) {
+
+  function openRepositoryLink() {
+    window.open(repoLink, '_blank');
+  }
+
   return (
-    <div className="repository">
+    <div className="repository" onClick={openRepositoryLink}>
       <h2 className="repository__title">{repoTitle}</h2>
       <p className="repository__description">{repoDescription}</p>
       <div className="repository__details">
